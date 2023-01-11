@@ -1,0 +1,260 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+*,
+*:before,
+*:after {
+    /** creador de google**/
+    box-sizing: inherit;
+}
+*:focus {
+    outline: none;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: rgb(34, 34, 34);
+}
+
+/** Globales **/
+img {
+    max-width: 100%; /** todas las imagenes son responsive**/
+}
+.contenedor {
+    width: 95%; /** para tener margenes en version movil **/
+    max-width: 120rem; /** =1200px; **/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+/* Utils */
+.activo {
+    display: block;
+}
+
+/** Botones **/
+.btn-add {
+    background-color: rgb(77, 77, 77);
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 3rem;
+}
+@media (min-width: 768px) {
+    .btn-add {
+        width: 6rem;
+        height: 6rem;
+        margin-left: 3.5rem;
+    }
+}
+.btn-cancel {
+    background-color: rgba(255, 0, 0, 0.459);
+    color: rgb(172, 5, 5);
+}
+.btn-acept {
+    background-color: rgba(20, 146, 20, 0.486);
+    color: rgb(2, 70, 2);
+}
+.btn-update {
+    display: none;
+    background-color: rgba(17, 199, 255, 0.452);
+    color: rgb(9, 112, 143);
+}
+/* Pantalla Principal */
+.pantalla-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pantalla-principal h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.icon-add {
+    color: white;
+    font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+    .pantalla-principal h1 {
+        font-size: 5rem;
+    }
+    .icon-add {
+        font-size: 3.2rem;
+    }
+}
+/**/
+.contenedor-notas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listado-notas {
+    padding: 0 2rem;
+    list-style: none;
+    margin: 0 auto;
+}
+.listado-notas li {
+    background-color: rgba(255, 255, 255, 0.048);
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0 0.3rem 2rem;
+    border-radius: 3rem;
+    color: white;
+    width: 100%;
+}
+.titulo-notas {
+    margin: 0;
+    text-align: center;
+    color: rgb(235, 235, 235);
+}
+.tachado {
+    text-decoration: line-through;
+}
+.texto-notas {
+    margin-right:3rem;
+
+}
+.texto-notas:hover {
+    cursor: pointer;
+
+}
+.listado-notas li:hover {
+    background-color: rgba(255, 255, 255, 0.103);
+}
+.icons {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.icons div:hover {
+    cursor: pointer;
+}
+.icon-edit {
+    background-color: rgba(104, 147, 240, 0.719);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.icon-delete {
+    background-color: rgba(190, 21, 21, 0.664);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+/* POP UP */
+/* modal design */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 5rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.514); /* Black w/ opacity */
+}
+
+/* Contenido Modal (popup) */
+.modal-content {
+    background-color: white;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    width: 70%;
+    height: 35vh;
+}
+.modal-content h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.caja-texto {
+    background-color: rgb(235, 235, 235);
+    border-radius: 2rem;
+    width: 100%;
+    height: 10vh;
+    resize: none;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+/**/
+.botones-nota {
+    /*     float: right; */
+    margin-top: 2rem;
+}
+.botones-nota button {
+    float: right;
+    border: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+/* Contador notas */
+.contador-notas {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.cont-titulo {
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.cont-text{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-right: .8rem;
+}
+.cont-text:last-of-type {
+    margin-right: 0;
+}

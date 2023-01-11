@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RUNOTES</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <section class="contenedor">
+        <div class="pantalla-principal">
+            <h1>Runotes</h1>
+            <button class="btn-add">
+                <a href="#">
+                    <i class="fas fa-plus icon-add"></i>
+                </a>
+            </button>
+        </div>
+
+        <div class="contador-notas">
+            <p class="cont-titulo">Total de notas</p>
+            <p class="cont-text cont-check"> 0</p>
+            <p class="cont-text"> /</p>
+            <p class="cont-text cont-total"> 0</p>
+        </div>
+        <div class="contenedor-notas ">
+            <ul id="listadoNotas" class="listado-notas ">
+                <!-- <li>
+                    <div class="texto-notas">
+                        ir a comprar pan
+                    </div>
+
+                    <div class="icons">
+                        <div class="icon-edit edit">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <div class="icon-delete remove">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </li> -->
+
+            </ul>
+
+            <ul id="listadoNotasChecked" class="listado-notas ">
+                <!-- <li>
+                    <div class="texto-notas">
+                        ir a comprar pan
+                    </div>
+
+                    <div class="icons">
+                        <div class="icon-edit edit">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <div class="icon-delete remove">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </li> -->
+
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content clearfix" onsubmit="guardarNota()">
+            <h2>Agregar Nota</h2>
+            <input id="cajaTexto" type="text" name="nota" class="caja-texto"></input>
+
+            <div class="botones-nota">
+
+                <button id="btnCancel" class="btn-cancel">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <button id="btnUpdate" class="btn-update">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+
+                <button id="btnAcept" class="btn-acept">
+                    <i class="fas fa-check"></i>
+                </button>
+
+            </div>
+        </div> <!-- .modal-content -->
+    </div> <!-- .modal -->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+function añadirRealizadas() {
+    listadoNotasChecked.innerHTML = '';
+    if (listaChecked.length > 0) {
+        
+        var h4Realizada = document.createElement("h4"); // Crear el elemento html <h4> </h4>
+        h4Realizada.className = "titulo-notas"; // Añadir la clase
+        var textoRealizada = document.createTextNode('Realizadas'); // Crear el elemento texto
+        h4Realizada.appendChild(textoRealizada); // Añadimos el texto al elemento <h4> Texto </h4>
+        var hrRealizada = document.createElement("hr"); // Crear el elemento html <hr>
+        h4Realizada.appendChild(hrRealizada);
+        listadoNotasChecked.appendChild(h4Realizada);
+
+        for (let i = 0; i < listaChecked.length; i++) {
+            const notaCheck = listaChecked[i]; // La nota de la posicion de i
+            var liRealizadas = document.createElement("li"); // Crear el elemento html <li> </li>
+            liRealizadas.className = "nota"; // Añadir la clase
+            var divTextoRealizadas = document.createElement("div"); // Crear el elemento html <li> </li>
+            divTextoRealizadas.className = "texto-notas"; // Añadir la clase
+            liRealizadas.appendChild(divTextoRealizadas); // Añadimos el texto al elemento <li> Texto </li>
+            var textRealizadas = document.createTextNode(notaCheck.texto); // Crea un elemento de text
+            divTextoRealizadas.appendChild(textRealizadas); // Añadimos el texto al elemento <li> Texto </li>
+            var divIconsRealizadas = document.createElement("div"); // Crear elemento <div> </div>
+            divIconsRealizadas.className = "icons"; // Añadir la clase
+            liRealizadas.appendChild(divIconsRealizadas); // Añadimos el icono al li <li> Texto <div class="icons"> </div>
+
+
+            var iconEditRealizadas = document.createElement("div"); // Crear elemento <div> </div>
+            iconEditRealizadas.className = "icon-edit"; // Añadir la clase
+
+            divIconsRealizadas.appendChild(iconEditRealizadas); // al div icons le añadimos el div iconEdit
+            var iEditRealizadas = document.createElement("i"); // Crear elemento <i> </i>
+            iEditRealizadas.className = "fas fa-pencil-alt"; // Añadir la clase
+            iconEditRealizadas.appendChild(iEditRealizadas); // al div le añadimos el icono de editar
+
+            var iconDeleteRealizadas = document.createElement("div"); // Crear elemento <div> </div>
+            iconDeleteRealizadas.className = "icon-delete remove"; // Añadir la clase
+            // Evento en escucha del click por cada elemento de la lista
+            divIconsRealizadas.appendChild(iconDeleteRealizadas); // al div icons le añadimos el div iconDelete
+            var iDeleteRealizadas = document.createElement("i"); // Crear elemento <i> </i>
+            iDeleteRealizadas.className = "fas fa-times"; // Añadir la clase
+            iconDeleteRealizadas.appendChild(iDeleteRealizadas); // al div le añadimos el icono de delete
+            listadoNotasChecked.appendChild(liRealizadas); // Añadimos este elemento li al padre (<ul id="listadoNotas"> </ul>)
+
+            $(divTextoRealizadas).addClass('tachado');
+        }
+    }
+}
+
+
+// **** VARIABLES  Globales **** //
+
+var modal = $("#modal"); // modal
+
+var btnAdd = $(".btn-add"); // boton add una nota
+
+var closeModal = $(".close-modal"); // elemento <span> para cerrar el modal
+
+var btnCancel = $("#btnCancel"); //Boton cancelar nota (modal)
+
+var btnAcept = $("#btnAcept"); //Boton añadir nota (modal)
+
+var btnUpdate = $("#btnUpdate"); //Boton Update(modal)
+
+var removeNota = $(".remove"); //Boton añadir nota (modal)
+
+var cajaTexto = $("#cajaTexto"); // caja texto nota agregamos un texto 
+
+var listadoNotasElement = $("#listadoNotas");
+
+var listadoNotasChecked = $("#listadoNotasChecked");
+
+var EditarNota = $(".edit");
+
+var tituloNotas = $(".titulo-notas");
+
+var listadoNotas = []; //declaramos el array vacio para mas abajo ir rellenandolo
+
+var listaChecked = []; //declaramos el array vacio para mas abajo ir rellenandolo
+
